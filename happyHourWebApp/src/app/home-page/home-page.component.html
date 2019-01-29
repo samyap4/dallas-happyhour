@@ -9,39 +9,121 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .checked {
+      color: orange;
+    }
 
+    .btn-container {
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+    }
+
+    .btn-wide {
+      width: 50%;
+      height: 50px;
+      margin-top: 10px;
+      border-radius: 8px;
+      font-size: 36px;
+      text-align: center;
+      line-height: 25px
+    }
+
+    .jumbo-div-par {
+      text-align: center;
+    }
+
+    .jumbotron {
+      background-color: white;
+      align-content: center;
+    }
+
+    .text-over{
+            height:400px;
+            color:white;    
+            font-size:40px;
+             font-style:oblique;
+             font-weight: bolder;
+             border-style: solid;
+             border-color: black;
+             
+        }
+        .vertical-center {
+            display: flex;
+            align-items: center;
+            
+        }
+        .full-width{
+          
+            width:100%
+        }
+    .sides {
+      box-sizing: border-box;
+      width: 50%;
+      /* or less */
+      display: inline-block;
+      color: gray;
+      
+    }
+
+  </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light pull-right ">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-      </ul>
-    </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Locations</a>
+      </li>
+    </ul>
+
 
   </nav>
 
   <div class="container-fluid">
-    <div class="jumbotron">
-      <!-- <h1 class="display-4">Weekly Happy Hour Spot!</h1>
-      <p class="lead">We will be meetin here on friday the </p> -->
-      <img src="https://i.pinimg.com/originals/e6/b8/53/e6b853b6eb516ae81c9f2cb2d9c56126.jpg" width="100%">
-      <!-- <div class="position-relative">
-          <div class="position-absolute">
-            <img src="https://i.pinimg.com/originals/e6/b8/53/e6b853b6eb516ae81c9f2cb2d9c56126.jpg" width="100%">
-          </div>
-          <div class="position-absolute">Countdown</div> -->
-      <!-- </div> -->
     
-      <hr class="my-4">
-      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    <div class="jumbotron position-relative" style="padding-top: 10px;">
+        <h3 >Friday's 4pm-6pm</h3>
+        
+      <!-- <h1>
+
+        <div class="sides">Friday 4-8</div>
+        <div class="sides " style="color:darkblue">
+          15 Fins Checked In
+        </div>
+      </h1> -->
+
+      <div class="vertical-center text-over" style="background-image: url('https://i.pinimg.com/originals/e6/b8/53/e6b853b6eb516ae81c9f2cb2d9c56126.jpg')">
+        <div class="text-center full-width" >
+                Join Us At The Standard Pour
+        </div>
+    </div>
+
+
+      <div class="btn-container">
+        <button class="btn-success btn-wide" id="btn_CheckIn">CHECK IN</button>
+      </div>
+
+
+      <h5>Star Rating</h5>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <p> </p>
+      <p>184 feet From The Office</p>
+      <p>Get one free mixed drink on Friday!</p>
+      <p>The Standard Pour, 2900 McKinney Ave, Dallas, TX 75204</p>
+
     </div>
   </div>
 
