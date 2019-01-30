@@ -10,10 +10,10 @@ export class HomePageComponent implements OnInit {
 
   headcount: number;
   modalVisible: boolean = false;
-
+  
   constructor() {
     console.log('Constructor initialised');
-    this.headcount = 5;
+    this.headcount = 0;
   }
 
   toggleModal() {
@@ -22,6 +22,7 @@ export class HomePageComponent implements OnInit {
 
   checkInSubmit() {
     console.log("submitting the modal here");
+    this.headcount+=1;
     this.toggleModal();
   }
 
