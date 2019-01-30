@@ -43,37 +43,50 @@
       align-content: center;
     }
 
-    .text-over{
-            height:400px;
-            color:white;    
-            font-size:40px;
-             font-style:oblique;
-             font-weight: bolder;
-             border-style: solid;
-             border-color: black;
-             
-        }
-        .vertical-center {
-            display: flex;
-            align-items: center;
-            
-        }
-        .full-width{
-          
-            width:100%
-        }
-    .sides {
-      box-sizing: border-box;
-      width: 50%;
-      /* or less */
-      display: inline-block;
+    .text-over {
+      height: 400px;
       color: gray;
-      
+      font-size: 40px;
+      font-style: oblique;
+      font-weight: bold;
+      border-style: solid;
+      border-color: black;
+
     }
-    .under-jum{
+
+    .vertical-center {
+      display: flex;
+      align-items: center;
+
+    }
+
+    .full-width {
+
+      width: 100%
+    }
+
+    .under-jum {
       text-align: center;
     }
 
+    div.background {
+      background: url(https://i.pinimg.com/originals/e6/b8/53/e6b853b6eb516ae81c9f2cb2d9c56126.jpg) repeat;
+      border: 2px solid black;
+    }
+
+    div.transbox {
+
+      background-color: #ffffff;
+      border: 1px solid black;
+      opacity: 0.6;
+      filter: alpha(opacity=60);
+    }
+
+    div.transbox p {
+      margin: 0%;
+      font-weight: bold;
+      color: black;
+    }
   </style>
 </head>
 
@@ -92,52 +105,55 @@
   </nav>
 
   <div class="container-fluid">
-    
-    <div class="jumbotron position-relative" style="padding-top: 10px;">
-        <h3 >Friday's 4pm-6pm</h3>
-        
-      <!-- <h1>
 
-        <div class="sides">Friday 4-8</div>
-        <div class="sides " style="color:darkblue">
-          15 Fins Checked In
+    <div class="jumbotron position-relative" style="padding-top: 10px;">
+      <div class="row">
+        <div class="col-6" style="text-align: left">
+          <h3>Friday's 4pm-6pm</h3>
         </div>
-      </h1> -->
+        <div class="col-6" style="text-align: right">
+<h3>Headcount</h3>
+        </div>
+      </div>
+      
+
 
       <div class="vertical-center text-over" style="background-image: url('https://i.pinimg.com/originals/e6/b8/53/e6b853b6eb516ae81c9f2cb2d9c56126.jpg')">
-        <div class="text-center full-width" >
-            <p >Join Us At The Standard Pour
+        <div class="transbox text-center full-width" style="text-align:center">
+
+          <p>Join Us At The Standard Pour</p>
         </div>
-    </div>
+      </div>
+      <!-- </div> -->
 
 
       <div class="btn-container">
         <button class="btn-success btn-wide" id="btn_CheckIn">CHECK IN</button>
       </div>
 
-    <p></p>
+      <br />
 
       <div class="row">
-        <div class="col-4 under-jum" >
-            <h5>Star Rating</h5>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <p>Get one free mixed drink on Friday!</p>
+        <div class="col-4 under-jum">
+          <h5>Star Rating</h5>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <p>Get one free mixed drink on Friday!</p>
         </div>
         <div class="col-4 under-jum">
           <h5>Location</h5>
-            <p>184 feet From The Office</p>
-            <p>The Standard Pour, 2900 McKinney Ave, Dallas, TX 75204</p>
+          <p>184 feet From The Office</p>
+          <p>The Standard Pour, 2900 McKinney Ave, Dallas, TX 75204</p>
 
-          </div>
-          <div class="col-4 under-jum">
-            <h5>Fins Checked In</h5>
-            </div>
-      </div>  
-      
+        </div>
+        <div class="col-4 under-jum">
+          <h5>Fins Checked In</h5>
+        </div>
+      </div>
+
 
     </div>
   </div>
