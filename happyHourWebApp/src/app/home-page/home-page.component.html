@@ -11,7 +11,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-    
+
   </style>
 </head>
 
@@ -37,10 +37,10 @@
           <h3>Friday's 4pm-6pm</h3>
         </div>
         <div class="col-6" style="text-align: right">
-<h3>Headcount</h3>
+          <h3>Headcount</h3>
         </div>
       </div>
-      
+
 
 
       <div class="vertical-center text-over" style="background-image: url('https://i.pinimg.com/originals/e6/b8/53/e6b853b6eb516ae81c9f2cb2d9c56126.jpg')">
@@ -53,16 +53,16 @@
 
 
       <div class="btn-container">
-        
-        <button class="btn-success btn-wide" id="btn_CheckIn"  data-toggle="modal" data-target="#exampleModal">CHECK IN</button>
-        
+
+        <button class="btn-success btn-wide" id="btn_CheckIn" (click)="toggleModal()" data-toggle="modal" data-target="#exampleModal">CHECK IN</button>
+
         <!-- <button id="reviewBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
                             style="width:500px">
                             Tell us what you think!
                         </button> -->
       </div>
-      
-<br>
+
+      <br>
       <div class="row">
         <div class="col-4 under-jum">
           <h5>Star Rating</h5>
@@ -88,27 +88,26 @@
     </div>
   </div>
 
-
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Review</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <input type="text" id="reviewText" width="100%">/>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" id="submitBtn" data-dismiss="modal" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
+<!--   -->
+  <div class="modal" [style.display]="modalVisible ? 'block' : 'none'" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Review</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span (click)="toggleModal()" aria-hidden="true">&times;</span>
+          </button>
         </div>
+        <div class="modal-body">
+          <input type="text" id="reviewText" width="100%"/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary"  (click)="toggleModal()" data-dismiss="modal">Close</button>
+          <button type="button" id="submitBtn" (click)="checkInSubmit()" data-dismiss="modal" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
     </div>
+  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -124,7 +123,7 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
-    <script src="jquery-3.3.1.min.js"></script>
+  <script src="jquery-3.3.1.min.js"></script>
 
 </body>
 

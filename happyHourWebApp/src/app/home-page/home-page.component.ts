@@ -7,17 +7,26 @@ import { increaseElementDepthCount } from '@angular/core/src/render3/state';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-  
-  
+
+  headcount: number;
+  modalVisible: boolean = false;
+
   constructor() {
     console.log('Constructor initialised');
-   
-
+    this.headcount = 5;
   }
- 
 
+  toggleModal() {
+    this.modalVisible = !this.modalVisible;
+  }
+
+  checkInSubmit() {
+    console.log("submitting the modal here");
+    this.toggleModal();
+  }
 
   ngOnInit() {
   }
+
 
 }
