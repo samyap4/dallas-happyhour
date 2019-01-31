@@ -20,6 +20,7 @@ export class HomePageComponent implements OnInit {
   }
 
   toggleModal() {
+    this.nameInput = "";
     this.modalVisible = !this.modalVisible;
   }
 

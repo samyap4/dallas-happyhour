@@ -12,6 +12,7 @@ export class AppComponent {
   list = false;
   detail = false;
   peopleList = ["Sam","Trevor"];
+  commentList = ["This place rocks!"];
 
 
   navigatePage(value: number) {

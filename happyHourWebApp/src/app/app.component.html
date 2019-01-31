@@ -16,7 +16,7 @@
 
     <app-home-page [attendees]="peopleList"*ngIf="home"></app-home-page>
 
-    <app-location-list *ngIf="list"></app-location-list>
+    <app-location-list [reviews]="commentList" *ngIf="list"></app-location-list>
 
     
 
