@@ -16,16 +16,20 @@
 </head>
 
 <body>
- 
+
 
   <div class="container-fluid">
 
     <div class="jumbotron position-relative" style="padding-top: 10px;">
       <div class="row">
-        <div class="col-6" style="text-align: left">
+        <div class="col-4" style="text-align: left">
           <h3>Friday's 4pm-6pm</h3>
         </div>
-        <div class="col-6" style="text-align: right">
+        <div class="col-4" style="text-align: center">
+          <h3>Party Starts In: {{countdown}}</h3>
+            <!-- <timer end-time="{{endTime}}">{{days}} days, {{hours}} hours, {{minutes}} minutes, {{seconds}} seconds.</timer> -->
+        </div>
+        <div class="col-4" style="text-align: right">
           <h3>Headcount: {{headcount}}</h3>
         </div>
       </div>
@@ -43,7 +47,8 @@
 
       <div class="btn-container">
 
-        <button class="btn-success btn-wide" id="btn_CheckIn" (click)="toggleModal()" data-toggle="modal" data-target="#exampleModal">CHECK IN</button>
+        <button class="btn-success btn-wide" id="btn_CheckIn" (click)="toggleModal()" data-toggle="modal" data-target="#exampleModal">CHECK
+          IN</button>
 
         <!-- <button id="reviewBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
                             style="width:500px">
@@ -71,7 +76,7 @@
         <div class="col-4 under-jum">
           <h5>Fins Checked In:</h5>
           <div *ngFor="let name of attendees">
-              {{name}}
+            {{name}}
           </div>
         </div>
       </div>
@@ -80,25 +85,61 @@
     </div>
   </div>
 
-<!--   -->
-  <div class="modal" [style.display]="modalVisible ? 'block' : 'none'" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!--   -->
+  <div class="modal" [style.display]="modalVisible ? 'block' : 'none'" id="exampleModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Name:</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Check In</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span (click)="toggleModal()" aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <input type="text" id="nameText" [(ngModel)]="nameInput" width="100%"/>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary"  (click)="toggleModal()" data-dismiss="modal">Close</button>
-          <button type="button" id="submitBtn" (click)="checkInSubmit($event)" data-dismiss="modal" class="btn btn-primary">Submit</button>
+          <div class="row">
+
+            <div class="col-6">
+              <label> Name: </label>
+            </div>
+
+            &nbsp;
+            <div class="col-6">
+              <input type="text" id="nameText" [(ngModel)]="nameInput" width="100%" required />
+            </div>
+
+          </div>
+
+          <br />
+
+          <div class="row">
+
+            <div class="col-6">
+              <label> Time: </label>
+            </div>
+
+            &nbsp;
+
+            <div class="col-6">
+              <select name="Time">
+                <option value="4">4 PM</option>
+                <option value="4.5">4:30 PM</option>
+                <option value="5">5 PM</option>
+                <option value="5.5">5:30 PM</option>
+                <option value="6">6 PM</option>
+                <option value="6.5">6:30 pm</option>
+              </select>
+            </div>
+
+          
         </div>
       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="toggleModal()" data-dismiss="modal">Close</button>
+        <button type="button" id="submitBtn" (click)="checkInSubmit($event)" data-dismiss="modal" class="btn btn-primary">Submit</button>
+      </div>
     </div>
+  </div>
   </div>
 
   <!-- Optional JavaScript -->
