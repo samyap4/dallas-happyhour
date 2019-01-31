@@ -1,0 +1,82 @@
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    
+   
+
+
+
+    <div *ngIf="!showDetail">
+        <div class="container-fluid">
+            <div class="text-center" style="margin-top:10px">
+                <h2>Uptown Hot Spots</h2>
+            </div>
+            <div class="row" style="margin-top:10px">
+                <div class="col-md-2">
+                    <!-- placeholder -->
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://images2.dallasobserver.com/imager/u/original/7195301/8391004.0.jpg" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">British Beverage Company</h5>
+                            <p class="card-text">A British inspired tavern located on the Quadrangle just feet from the
+                                office. Offers wide selection of draft beer and top-notch mixed drinks.</p>
+                            <a href="#" class="btn btn-primary">See More</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://brewstraveller.files.wordpress.com/2010/03/p1020623.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Ginger Man</h5>
+                            <p class="card-text">A relaxed beer garden chain with plentiful brews, pub grub, live music & special
+                                    events.</p>
+                            <a href="#" class="btn btn-primary" (click)="viewDetail()">See More</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://cdn.vox-cdn.com/thumbor/m2k_kM2mE8o8Gc4fTIguMAgrxsY=/60x0:1938x1409/1200x900/filters:focal(60x0:1938x1409)/cdn.vox-cdn.com/uploads/chorus_image/image/46572746/parliamentKD6.0.0.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Parliament</h5>
+                            <p class="card-text">A swanky, modern cocktail bar located in the heart of Uptown who offers a sophistaced vibe and outstanding
+                                happy hour deals.
+                            </p>
+                            <a href="#" class="btn btn-primary">See More</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="http://frontrow.dmagazine.com/wp-content/uploads/2015/07/uptown-bar-leah-clausen.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Blackfriar Pub</h5>
+                            <p class="card-text">Popular hangout in a wood-frame house & garden, with beer, cocktails & pub grub with a Texas twist.</p>
+                            <a href="#" class="btn btn-primary">See More</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-2">
+                    <!-- placeholder -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <app-location-detail *ngIf="showDetail" (goBack)="viewDetail()"></app-location-detail>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
