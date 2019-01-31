@@ -121,13 +121,13 @@
             &nbsp;
 
             <div class="col-6">
-              <select name="Time">
-                <option value="4">4 PM</option>
-                <option value="4.5">4:30 PM</option>
-                <option value="5">5 PM</option>
-                <option value="5.5">5:30 PM</option>
-                <option value="6">6 PM</option>
-                <option value="6.5">6:30 pm</option>
+              <select name="Time" [(ngModel)]="timeInput">
+                <option value="4:00 PM">4:00 PM</option>
+                <option value="4:30 PM">4:30 PM</option>
+                <option value="5:00 PM">5:00 PM</option>
+                <option value="5:30 PM">5:30 PM</option>
+                <option value="6:00 PM">6:00 PM</option>
+                <option value="6:30 PM">6:30 pm</option>
               </select>
             </div>
 

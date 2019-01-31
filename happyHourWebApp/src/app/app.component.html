@@ -14,10 +14,12 @@
 
     </nav>
 
-    <app-home-page [attendees]="peopleList"*ngIf="home"></app-home-page>
+    <app-home-page [attendees]="peopleList" *ngIf="home"></app-home-page>
 
     <app-location-list [reviews]="commentList" *ngIf="list"></app-location-list>
 
-    
+
+
+
 
     <router-outlet></router-outlet>

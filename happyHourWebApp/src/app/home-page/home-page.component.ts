@@ -12,7 +12,8 @@ export class HomePageComponent implements OnInit {
   headcount = 0;
   modalVisible: boolean = false;
   nameInput: string = "";
-  @Input() attendees;;
+  timeInput: string = "";
+  @Input() attendees;
 
   fridayMil() {
     let today = new Date();
@@ -38,7 +39,8 @@ export class HomePageComponent implements OnInit {
   }
 
   checkInSubmit(event: Event) {
-    this.attendees.push(this.nameInput)
+    let value = this.nameInput +" "+ this.timeInput;
+    this.attendees.push(value)
     console.log("submitting the modal here");
     console.log(this.nameInput);
 
@@ -54,28 +56,9 @@ export class HomePageComponent implements OnInit {
     var minutes = Math.floor(fridayMil / (1000 * 60) % 60);
     var seconds = Math.floor(fridayMil / 1000 % 60);
 
-    // hours = hours < 10 ? '0' + hours : hours;
-    // minutes = minutes < 10 ? '0' + minutes : minutes;
-    // seconds = seconds < 10 ? '0' + seconds : seconds;
-
     return (hours) + delim + minutes + delim + seconds;
 
   }
-
-
-  // countdownFunc(duration) {
-  //   var milliseconds = ((duration % 1000) / 100),
-
-  //     seconds = ((duration / 1000) % 60),
-  //     minutes = ((duration / (1000 * 60)) % 60),
-  //     hours = ((duration / (1000 * 60 * 60)) % 24);
-
-  //   hours = (hours < 10) ? parseInt("0" + hours) : hours;
-  //   minutes = (minutes < 10) ? parseInt("0" + minutes) : minutes;
-  //   seconds = (seconds < 10) ? parseInt("0" + seconds) : seconds;
-
-  //   return hours + ":" + minutes + ":" + seconds + "." + milliseconds;
-  // }
 
   ngOnInit() {
     setTimeout(() => {

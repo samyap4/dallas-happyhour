@@ -11,7 +11,7 @@ export class AppComponent {
   home = true;
   list = false;
   detail = false;
-  peopleList = ["Sam","Trevor"];
+  peopleList = ["Sam 4:00 PM","Trevor 4:30 PM"];
   commentList = ["This place rocks!"];
 
 
