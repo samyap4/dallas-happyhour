@@ -11,6 +11,7 @@ export class AppComponent {
   home = true;
   list = false;
   detail = false;
+  peopleList = ["Sam","Trevor"];
 
 
   navigatePage(value: number) {

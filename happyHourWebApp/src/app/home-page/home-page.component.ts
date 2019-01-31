@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormsModule, NgModel } from '@angular/forms';
 import { increaseElementDepthCount } from '@angular/core/src/render3/state';
 
 @Component({
@@ -8,25 +9,34 @@ import { increaseElementDepthCount } from '@angular/core/src/render3/state';
 })
 export class HomePageComponent implements OnInit {
 
-  headcount: number;
+  headcount = 0;
   modalVisible: boolean = false;
-  
+  nameInput: string = "";
+  @Input() attendees;
+
   constructor() {
     console.log('Constructor initialised');
-    this.headcount = 0;
+
   }
 
   toggleModal() {
     this.modalVisible = !this.modalVisible;
   }
 
-  checkInSubmit() {
+  checkInSubmit(event: Event) {
+    this.attendees.push(this.nameInput)
     console.log("submitting the modal here");
-    this.headcount+=1;
+    console.log(this.nameInput);
+
+    this.headcount += 1;
     this.toggleModal();
   }
 
   ngOnInit() {
+    setTimeout(() => {
+      this.headcount = this.attendees.length;
+    },
+      100);
   }
 
 

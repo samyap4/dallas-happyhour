@@ -14,7 +14,7 @@
 
     </nav>
 
-    <app-home-page *ngIf="home"></app-home-page>
+    <app-home-page [attendees]="peopleList"*ngIf="home"></app-home-page>
 
     <app-location-list *ngIf="list"></app-location-list>
 
