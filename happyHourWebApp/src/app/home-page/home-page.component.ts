@@ -22,7 +22,7 @@ export class HomePageComponent implements OnInit {
     let dateTime = date + ' ' + time;
     let mill = (new Date).getTime();
     let current = mill;
-    return (1549058400000 - 3600000) - current;
+    return 1549054800000 - current;
   }
   countdown = this.countdownFunc(this.fridayMil());
 
